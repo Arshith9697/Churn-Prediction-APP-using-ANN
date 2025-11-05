@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import tensorflow as tf
 from tensorflow.keras.models import load_model
 import streamlit as st
 import pickle
@@ -58,4 +57,5 @@ if st.button("Predict"):
     if predict_proba > 0.5:
         st.error(f"The Customer will Churn with a probability of {predict_proba}")
     else:
+
         st.success(f"The Customer will not Churn with a probability of {1 - predict_proba}")
